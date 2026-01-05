@@ -1,0 +1,1610 @@
+/* ============================================
+   CELL INFO - Modern Responsive Design
+   Clean, Professional UI with Smooth Animations
+   ============================================ */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.navbar {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid transparent;
+    background-image: linear-gradient(rgba(229, 9, 20, 0.1), rgba(229, 9, 20, 0.1));
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: all 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.navbar:hover {
+    background-size: 100% 100%;
+    border-bottom-color: #E50914;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #E50914;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    text-shadow: 0 0 30px rgba(229, 9, 20, 0.8);
+    transform: scale(1.05);
+}
+
+.navlinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navlinks li {
+    position: relative;
+}
+
+.navlinks a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 18px;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.navlinks a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(229, 9, 20, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.navlinks a:hover::before {
+    left: 100%;
+}
+
+.navlinks a:hover {
+    color: #E50914;
+    background: rgba(229, 9, 20, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.3);
+}
+
+/* Dropdown Menu */
+.dropdownmenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(20, 20, 20, 0.98);
+    backdrop-filter: blur(10px);
+    list-style: none;
+    display: none;
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(229, 9, 20, 0.2);
+    overflow: hidden;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdownmenu li a {
+    padding: 12px 15px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.dropdownmenu li:last-child a {
+    border-bottom: none;
+}
+
+.dropdownmenu li a:hover {
+    background: linear-gradient(90deg, rgba(229, 9, 20, 0.2), transparent);
+    color: #E50914;
+    padding-left: 20px;
+}
+
+.dropdown:hover .dropdownmenu {
+    display: block;
+}
+
+/* ============================================
+   BANNER
+   ============================================ */
+
+.banner {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    background-image: url(images/cellinfobanner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.8) 100%);
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #E50914, transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* ============================================
+   SECTION HEADINGS
+   ============================================ */
+
+.headingforcardsinhome {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.headingforcardsinhome h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #E50914;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    animation: fadeInUp 1s ease;
+}
+
+.headingforcardsinhome h1::before,
+.headingforcardsinhome h1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #E50914);
+}
+
+.headingforcardsinhome h1::before {
+    right: calc(100% + 20px);
+}
+
+.headingforcardsinhome h1::after {
+    left: calc(100% + 20px);
+    background: linear-gradient(90deg, #E50914, transparent);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.parentofcard {
+    display: flex;
+    gap: 30px;
+    padding: 20px 40px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 320px;
+    height: 320px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    background: #1a1a2e;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    padding: 2px;
+    background: linear-gradient(135deg, #E50914, #ff6b6b, #E50914);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(229, 9, 20, 0.4);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 20px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.overlay h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #E50914;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(229, 9, 20, 0.5);
+}
+
+.overlay ul {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.overlay ul li {
+    font-size: 13px;
+    margin-bottom: 6px;
+    padding-left: 20px;
+    position: relative;
+    color: #e0e0e0;
+    line-height: 1.4;
+}
+
+.overlay ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #E50914;
+    font-weight: bold;
+}
+
+.overlay button {
+    padding: 12px 30px;
+    border: none;
+    background: linear-gradient(135deg, #E50914 0%, #b20710 100%);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(229, 9, 20, 0.4);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.overlay button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(229, 9, 20, 0.6);
+    background: linear-gradient(135deg, #ff1f2c 0%, #E50914 100%);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    width: 100%;
+    min-height: 400px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 60px 100px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #E50914, transparent);
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #E50914, transparent);
+}
+
+.footer div {
+    width: 280px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.footer h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #E50914;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #E50914, transparent);
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #b0b0b0;
+}
+
+.footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    display: block;
+    position: relative;
+}
+
+.footer a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #E50914;
+    transition: width 0.3s ease;
+}
+
+.footer a:hover {
+    color: #E50914;
+    padding-left: 10px;
+}
+
+.footer a:hover::before {
+    width: 100%;
+}
+
+.footer div i {
+    color: #E50914;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover i {
+    transform: scale(1.2);
+}
+
+/* ============================================
+   PHONE DETAILS PAGE
+   ============================================ */
+
+.phonedetails {
+    display: flex;
+    gap: 50px;
+    padding: 80px 10%;
+    color: #e0e0e0;
+    align-items: flex-start;
+    animation: fadeInUp 1s ease;
+}
+
+.phoneimage {
+    flex-shrink: 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.phoneimage img {
+    width: 500px;
+    height: 580px;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(229, 9, 20, 0.3);
+    border: 3px solid transparent;
+    background: linear-gradient(#1a1a2e, #1a1a2e) padding-box,
+                linear-gradient(135deg, #E50914, #ff6b6b) border-box;
+    transition: all 0.4s ease;
+}
+
+.phoneimage img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 80px rgba(229, 9, 20, 0.5);
+}
+
+.phoneinfo {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.phoneinfo h1 {
+    color: #E50914;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease 0.2s both;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+}
+
+.price {
+    color: #E50914;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    animation: fadeInUp 1s ease 0.3s both;
+    text-shadow: 0 0 15px rgba(229, 9, 20, 0.5);
+}
+
+.phoneinfo p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #d0d0d0;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.phoneinfo ul {
+    list-style: none;
+    padding: 0;
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+.phoneinfo ul li {
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: #c0c0c0;
+    transition: all 0.3s ease;
+}
+
+.phoneinfo ul li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: #E50914;
+    font-size: 12px;
+    top: 3px;
+}
+
+.phoneinfo ul li:hover {
+    color: #E50914;
+    padding-left: 30px;
+}
+
+/* ============================================
+   COMPANY PAGES (Apple, Samsung, Pixel)
+   ============================================ */
+
+.logoofapple,
+.logoofsamsung,
+.logoofgoogle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.logoofapple img,
+.logoofsamsung img,
+.logoofgoogle img {
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(0 10px 30px rgba(229, 9, 20, 0.3));
+    transition: all 0.4s ease;
+}
+
+.logoofapple img:hover,
+.logoofsamsung img:hover,
+.logoofgoogle img:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 15px 40px rgba(229, 9, 20, 0.5));
+}
+
+.companyinfo {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 40px;
+    background: rgba(26, 26, 46, 0.5);
+    border-radius: 20px;
+    border: 1px solid rgba(229, 9, 20, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.companyinfo h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #E50914;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+}
+
+.companyinfo p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #d0d0d0;
+    text-align: justify;
+}
+
+.companyinfo mark {
+    background: linear-gradient(135deg, rgba(229, 9, 20, 0.3), rgba(229, 9, 20, 0.1));
+    color: #E50914;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+.aboutcellinfo {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 100px;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 26, 46, 0.9) 100%);
+    gap: 60px;
+}
+
+.abouttext {
+    width: 55%;
+    color: #ffffff;
+}
+
+.abouttext h2 {
+    color: #E50914;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+    animation: fadeInUp 1s ease;
+}
+
+.abouttext p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #d0d0d0;
+}
+
+.abouttext .p1 { animation: fadeInUp 1s ease 0.2s both; }
+.abouttext .p2 { animation: fadeInUp 1s ease 0.4s both; }
+.abouttext .p3 { animation: fadeInUp 1s ease 0.6s both; }
+.abouttext .p4 { animation: fadeInUp 1s ease 0.8s both; }
+
+.aboutimage {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.aboutimage img {
+    width: 500px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(229, 9, 20, 0.3);
+    border: 3px solid transparent;
+    background: linear-gradient(#1a1a2e, #1a1a2e) padding-box,
+                linear-gradient(135deg, #E50914, #ff6b6b) border-box;
+    transition: all 0.4s ease;
+}
+
+.aboutimage img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 30px 80px rgba(229, 9, 20, 0.5);
+}
+
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+
+.contactheading {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.contactheading h2 {
+    color: #E50914;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+    animation: fadeInUp 1s ease;
+}
+
+.contactheading p {
+    color: #d0d0d0;
+    font-size: 16px;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.contactcontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contactinfo {
+    width: 45%;
+    animation: fadeInUp 1s ease 0.3s both;
+}
+
+.infobox {
+    margin-bottom: 35px;
+    padding: 25px;
+    background: rgba(26, 26, 46, 0.5);
+    border-radius: 15px;
+    border: 1px solid rgba(229, 9, 20, 0.2);
+    transition: all 0.3s ease;
+}
+
+.infobox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3);
+    border-color: rgba(229, 9, 20, 0.5);
+}
+
+.infobox i {
+    font-size: 32px;
+    color: #E50914;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.infobox h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.infobox p {
+    color: #d0d0d0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contactform {
+    width: 50%;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(229, 9, 20, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.contactform h2 {
+    color: #E50914;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contactform form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactform input,
+.contactform textarea {
+    padding: 15px;
+    border: 2px solid rgba(229, 9, 20, 0.3);
+    background: rgba(10, 10, 10, 0.8);
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.contactform input:focus,
+.contactform textarea:focus {
+    border-color: #E50914;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+}
+
+.contactform input::placeholder,
+.contactform textarea::placeholder {
+    color: #808080;
+}
+
+.contactform button {
+    padding: 15px;
+    background: linear-gradient(135deg, #E50914 0%, #b20710 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(229, 9, 20, 0.4);
+}
+
+.contactform button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.6);
+    background: linear-gradient(135deg, #ff1f2c 0%, #E50914 100%);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(229, 9, 20, 0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ============================================ */
+
+/* Large Tablets and Small Desktops (1024px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .footer {
+        padding: 50px 60px 30px;
+    }
+    
+    .footer div {
+        width: 250px;
+    }
+    
+    .aboutcellinfo {
+        padding: 60px 60px;
+    }
+    
+    .abouttext h2 {
+        font-size: 36px;
+    }
+    
+    .aboutimage img {
+        width: 450px;
+        height: 400px;
+    }
+    
+    .contactcontainer {
+        padding: 40px 60px;
+    }
+    
+    .phonedetails {
+        padding: 60px 5%;
+    }
+    
+    .phoneimage img {
+        width: 450px;
+        height: 520px;
+    }
+    
+    .phoneinfo h1 {
+        font-size: 36px;
+    }
+}
+
+/* Tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 15px 25px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .navlinks a {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    .dropdownmenu {
+        min-width: 160px;
+    }
+    
+    .banner {
+        height: 400px;
+    }
+    
+    .headingforcardsinhome h1 {
+        font-size: 30px;
+    }
+    
+    .card {
+        width: 290px;
+        height: 290px;
+    }
+    
+    .overlay h2 {
+        font-size: 18px;
+    }
+    
+    .overlay ul li {
+        font-size: 12px;
+    }
+    
+    .footer {
+        padding: 40px 40px 20px;
+        min-height: auto;
+    }
+    
+    .footer div {
+        width: 220px;
+    }
+    
+    .footer h2 {
+        font-size: 18px;
+    }
+    
+    .aboutcellinfo {
+        flex-direction: column;
+        padding: 50px 40px;
+        gap: 40px;
+    }
+    
+    .abouttext {
+        width: 100%;
+    }
+    
+    .abouttext h2 {
+        font-size: 32px;
+    }
+    
+    .abouttext p {
+        font-size: 15px;
+    }
+    
+    .aboutimage {
+        width: 100%;
+    }
+    
+    .aboutimage img {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+    
+    .contactcontainer {
+        flex-direction: column;
+        padding: 40px 40px;
+        gap: 40px;
+    }
+    
+    .contactinfo,
+    .contactform {
+        width: 100%;
+    }
+    
+    .phonedetails {
+        flex-direction: column;
+        padding: 50px 40px;
+        gap: 40px;
+    }
+    
+    .phoneimage img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    
+    .phoneinfo {
+        width: 100%;
+    }
+    
+    .phoneinfo h1 {
+        font-size: 32px;
+    }
+    
+    .price {
+        font-size: 28px;
+    }
+    
+    .companyinfo {
+        padding: 30px 40px;
+    }
+    
+    .companyinfo h2 {
+        font-size: 32px;
+    }
+    
+    .companyinfo p {
+        font-size: 15px;
+    }
+    
+    .logoofapple img,
+    .logoofsamsung img,
+    .logoofgoogle img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+}
+
+/* Mobile Landscape (480px - 768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    .navlinks {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3px;
+    }
+    
+    .navlinks li {
+        margin: 2px;
+    }
+    
+    .navlinks a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    
+    .dropdownmenu {
+        position: static;
+        display: none;
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .dropdown:hover .dropdownmenu {
+        display: block;
+    }
+    
+    .banner {
+        height: 300px;
+    }
+    
+    .headingforcardsinhome h1 {
+        font-size: 26px;
+    }
+    
+    .headingforcardsinhome h1::before,
+    .headingforcardsinhome h1::after {
+        width: 40px;
+    }
+    
+    .parentofcard {
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+    
+    .overlay h2 {
+        font-size: 16px;
+    }
+    
+    .overlay ul li {
+        font-size: 11px;
+    }
+    
+    .overlay button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .footer {
+        padding: 30px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .footer div {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .footer h2 {
+        font-size: 18px;
+    }
+    
+    .footer p,
+    .footer a {
+        font-size: 13px;
+    }
+    
+    .aboutcellinfo {
+        padding: 40px 25px;
+    }
+    
+    .abouttext h2 {
+        font-size: 28px;
+    }
+    
+    .abouttext p {
+        font-size: 14px;
+    }
+    
+    .aboutimage img {
+        max-width: 350px;
+    }
+    
+    .contactheading h2 {
+        font-size: 32px;
+    }
+    
+    .contactheading p {
+        font-size: 14px;
+    }
+    
+    .contactcontainer {
+        padding: 30px 25px;
+    }
+    
+    .infobox {
+        padding: 20px;
+    }
+    
+    .infobox i {
+        font-size: 28px;
+    }
+    
+    .infobox h2 {
+        font-size: 18px;
+    }
+    
+    .infobox p {
+        font-size: 14px;
+    }
+    
+    .contactform {
+        padding: 30px;
+    }
+    
+    .contactform h2 {
+        font-size: 24px;
+    }
+    
+    .contactform input,
+    .contactform textarea {
+        font-size: 14px;
+    }
+    
+    .phonedetails {
+        padding: 40px 25px;
+    }
+    
+    .phoneimage img {
+        max-width: 350px;
+    }
+    
+    .phoneinfo h1 {
+        font-size: 28px;
+    }
+    
+    .phoneinfo p {
+        font-size: 14px;
+    }
+    
+    .phoneinfo ul li {
+        font-size: 13px;
+    }
+    
+    .companyinfo {
+        padding: 25px;
+    }
+    
+    .companyinfo h2 {
+        font-size: 28px;
+    }
+    
+    .companyinfo p {
+        font-size: 14px;
+    }
+    
+    .logoofapple img,
+    .logoofsamsung img,
+    .logoofgoogle img {
+        max-width: 250px;
+    }
+}
+
+/* Mobile Portrait (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 12px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .navlinks {
+        gap: 2px;
+    }
+    
+    .navlinks a {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+    
+    .dropdownmenu li a {
+        padding: 10px;
+        font-size: 11px;
+    }
+    
+    .banner {
+        height: 250px;
+    }
+    
+    .headingforcardsinhome {
+        padding: 30px 15px 15px;
+    }
+    
+    .headingforcardsinhome h1 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+    
+    .headingforcardsinhome h1::before,
+    .headingforcardsinhome h1::after {
+        width: 30px;
+    }
+    
+    .parentofcard {
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .card {
+        width: 100%;
+        height: 260px;
+    }
+    
+    .overlay h2 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .overlay ul {
+        margin-bottom: 15px;
+    }
+    
+    .overlay ul li {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+    
+    .overlay button {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+    
+    .footer {
+        padding: 25px 20px;
+    }
+    
+    .footer h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .footer p,
+    .footer a {
+        font-size: 12px;
+    }
+    
+    .aboutcellinfo {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .abouttext h2 {
+        font-size: 24px;
+    }
+    
+    .abouttext p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    .aboutimage img {
+        max-width: 280px;
+    }
+    
+    .contactheading {
+        padding: 40px 20px 30px;
+    }
+    
+    .contactheading h2 {
+        font-size: 26px;
+    }
+    
+    .contactheading p {
+        font-size: 13px;
+    }
+    
+    .contactcontainer {
+        padding: 25px 20px;
+        gap: 25px;
+    }
+    
+    .infobox {
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .infobox i {
+        font-size: 24px;
+    }
+    
+    .infobox h2 {
+        font-size: 16px;
+    }
+    
+    .infobox p {
+        font-size: 13px;
+    }
+    
+    .contactform {
+        padding: 25px;
+    }
+    
+    .contactform h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .contactform input,
+    .contactform textarea {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    .contactform button {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .phonedetails {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .phoneimage img {
+        max-width: 280px;
+        border-width: 2px;
+    }
+    
+    .phoneinfo h1 {
+        font-size: 24px;
+    }
+    
+    .price {
+        font-size: 24px;
+    }
+    
+    .phoneinfo p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    .phoneinfo ul li {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .companyinfo {
+        padding: 20px;
+        margin: 30px auto;
+    }
+    
+    .companyinfo h2 {
+        font-size: 24px;
+    }
+    
+    .companyinfo p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    .logoofapple img,
+    .logoofsamsung img,
+    .logoofgoogle img {
+        max-width: 200px;
+    }
+}
+
+/* Extra Small Devices (max 320px) */
+@media screen and (max-width: 320px) {
+    .logo {
+        font-size: 18px;
+    }
+    
+    .navlinks a {
+        padding: 5px 6px;
+        font-size: 10px;
+    }
+    
+    .banner {
+        height: 220px;
+    }
+    
+    .headingforcardsinhome h1 {
+        font-size: 20px;
+    }
+    
+    .card {
+        height: 240px;
+    }
+    
+    .overlay h2 {
+        font-size: 14px;
+    }
+    
+    .overlay ul li {
+        font-size: 9px;
+    }
+    
+    .overlay button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+    
+    .footer h2 {
+        font-size: 15px;
+    }
+    
+    .footer p,
+    .footer a {
+        font-size: 11px;
+    }
+    
+    .abouttext h2 {
+        font-size: 22px;
+    }
+    
+    .abouttext p {
+        font-size: 12px;
+    }
+    
+    .contactheading h2 {
+        font-size: 22px;
+    }
+    
+    .contactheading p {
+        font-size: 12px;
+    }
+    
+    .phoneinfo h1 {
+        font-size: 22px;
+    }
+    
+    .price {
+        font-size: 22px;
+    }
+    
+    .companyinfo h2 {
+        font-size: 22px;
+    }
+    
+    .companyinfo p {
+        font-size: 12px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .banner {
+        display: none;
+    }
+    
+    .phonedetails,
+    .aboutcellinfo,
+    .contactcontainer {
+        padding: 0;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .phoneinfo,
+    .abouttext,
+    .contactinfo,
+    .contactform {
+        color: black;
+    }
+}
